@@ -23,7 +23,8 @@ class EV(Process):
 		#New
 
 		self.inicio = env.now
-		creacion_pro  = random.expovariate(1.0 / 10)
+		intervalo = 10
+		creacion_pro  = random.expovariate(1.0 / intervalo)
 		num_memoria = random.randint(1,10)#Se genera aleatoriamente la cantidad de memoria que uilizara un proceso
 		yield env.timeout(creacion_pro)
 		print("%s necesita %d mb de ram") % (numeroProceso,num_memoria)
